@@ -1,5 +1,5 @@
 const express = require('express');
-const answer = require('../red/answer.js')
+const answer = require('../../red/answer.js')
 
 const router = express.Router();
 

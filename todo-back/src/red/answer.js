@@ -1,20 +1,16 @@
 // configurar las respuestas de error y OK
-exports.success = function (req, res, messaje, status) {
-    const statusCode = status || 200;
-    const messajeOK = messaje || '';
+exports.success = function (req, res, messaje = '', status = 200) {
     res.status(statusCode).send({
         error: false,
-        status: statusCode,
-        body: messajeOK
+        status: status,
+        body: messaje
     });
 }
 
-exports.error = function (req, res, messaje, status) {
-    const statusCode = status || 500;
-    const messajeError = messaje || 'Internal Error';
+exports.error = function (req, res, messaje = 'Internal Error', status = 500) {
     res.staus(status).send({
         error: true,
-        status: statusCode,
-        body: messajeError
+        status: status,
+        body: messaje
     });
 }
