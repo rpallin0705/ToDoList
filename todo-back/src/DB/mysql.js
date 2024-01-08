@@ -1,8 +1,15 @@
 const mysql = require('mysql');
 const config = require('../config.js');
 
+// ToDo: Borrar, esto es una prueba
+const prueba = {
+    id: 1, 
+    "nombre": "juan",
+    "edad": 43
+}
+
 function getAll(table){
-    return 'Todos';
+    return prueba;
 }
 
 function getOne(tabñe, id){
