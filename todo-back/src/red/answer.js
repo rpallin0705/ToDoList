@@ -1,6 +1,6 @@
 // configurar las respuestas de error y OK
 exports.success = function (req, res, messaje = '', status = 200) {
-    res.status(statusCode).send({
+    res.status(status).send({
         error: false,
         status: status,
         body: messaje
