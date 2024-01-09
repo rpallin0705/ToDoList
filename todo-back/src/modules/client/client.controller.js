@@ -6,8 +6,12 @@ const router = express.Router();
 const userService = require('./client.service.js');
 
 router.get('/', (req, res) => {
-    const clients = userService.getAllClients();
-    answer.success(req, res, clients, 200);
+    const clients = userService.getAllClients().then((items) => {
+        answer.success(req, res, items, 200);
+    }).catch(error => {
+        console.log(error)
+    });
+    
 });
 
 module.exports = router;
