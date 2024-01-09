@@ -8,8 +8,6 @@ const userService = require('./client.service.js');
 router.get('/', (req, res) => {
     const clients = userService.getAllClients().then((items) => {
         answer.success(req, res, items, 200);
-    }).catch(error => {
-        console.log(error)
     });
     
 });
