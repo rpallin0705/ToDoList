@@ -9,6 +9,21 @@ function getAllClients(){
     return db.getAll(TABLE);
 }
 
+function getOneClientById(id){
+    return db.getOne(TABLE, id);
+}
+
+function deleteOneClient(body){
+    return db.deleteOne(TABLE, body);
+}
+
+function addOneClient(body){
+    return db.addOne(TABLE, body);
+}
+
 module.exports = {
-    getAllClients
+    getAllClients,
+    getOneClientById,
+    deleteOneClient,
+    addOneClient
 }

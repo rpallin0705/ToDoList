@@ -8,7 +8,7 @@ exports.success = function (req, res, messaje = '', status = 200) {
 }
 
 exports.error = function (req, res, messaje = 'Internal Error', status = 500) {
-    res.staus(status).send({
+    res.status(status).send({
         error: true,
         status: status,
         body: messaje
